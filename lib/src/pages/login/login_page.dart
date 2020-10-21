@@ -28,9 +28,39 @@ class _LoginState extends State<Login> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Image.asset("assets/images/logo.png", width: 200,),
-          SizedBox(height: 120),
-          _loginPageBtn("สร้างบัญชีผู้ใช้", Icons.mode_outlined, Colors.green),
-          _loginPageBtn("เข้าสู่ระบบ", Icons.login_outlined, Colors.pinkAccent),
+          SizedBox(height: 30),
+          Container(
+            width: 300, 
+            child: TextField(
+              decoration: InputDecoration(
+                hintText: "Username",
+                filled: true,
+                fillColor: Colors.grey[300],
+                prefixIcon: Icon(Icons.account_box)
+              ),
+            )
+          ),
+          Container(
+            margin: const EdgeInsets.all(10),
+            width: 300, 
+            child: TextField(
+              obscureText: true,
+              decoration: InputDecoration(
+                hintText: "Password",
+                filled: true,
+                fillColor: Colors.grey[300],
+                prefixIcon: Icon(Icons.lock)
+              ),
+            )
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _loginPageBtn("สร้างบัญชีผู้ใช้", Icons.mode_outlined, Colors.green),
+              SizedBox(width: 10),
+              _loginPageBtn("เข้าสู่ระบบ", Icons.login_outlined, Colors.pinkAccent),
+            ],
+          ),
         ]
       )
     );
@@ -40,7 +70,6 @@ class _LoginState extends State<Login> {
     return OutlineButton(
           onPressed: () {},
           child: Container(
-            width: 150,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
