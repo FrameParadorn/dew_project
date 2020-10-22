@@ -1,3 +1,5 @@
+import 'package:dew_project/src/pages/home/home_page.dart';
+import 'package:dew_project/src/pages/home/my_job.dart';
 import 'package:dew_project/src/pages/login/login_page.dart';
 import 'package:dew_project/src/pages/register/register_page.dart';
 import 'package:flutter/material.dart';
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Register(),
+      home: Home(),
     );
   }
 }
